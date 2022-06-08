@@ -1,13 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Inter", sans-serif;
+  @apply text-gray-900;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  @apply mx-auto md:max-w-2xl max-w-md;
+}
+
+.header__wrapper {
+  @apply w-full h-12 shadow-md;
+}
+.header__content {
+  @apply flex items-center justify-center mt-4;
+}
+.header__content h1 {
+  @apply mr-3 text-lg font-bold;
+}
+.header__content img {
+  @apply w-8;
+}
+
+.new-message__wrapper {
+  @apply bg-[#e8f6ff] px-3 py-6 lg:px-5 lg:py-8 rounded-sm mt-6;
+}
+.new-message__content {
+  @apply text-xl lg:text-2xl text-center;
+}
+.new-message__content h3 {
+  @apply font-bold;
+}
+
+.new-message-form__message label {
+  @apply text-sm inline-block mt-5 font-medium text-gray-800 after:content-['*'] after:ml-0.5 after:text-red-500;
+}
+.new-message-form__message textarea {
+  @apply w-full rounded-sm p-2 mt-4 h-20 text-gray-700 resize-none focus:outline-none overflow-auto placeholder-gray-400;
+}
+.new-message-form__message p {
+  @apply text-xs text-pink-600 mt-2 font-medium;
+}
+.new-message-form__message .invalid {
+  @apply bg-pink-200 border border-pink-600;
+}
+
+.new-message-form__nickname label {
+  @apply text-sm inline-block mt-5 font-medium text-gray-800;
+}
+
+.new-message-form__nickname input {
+  @apply w-full rounded-sm p-2 mt-1 text-sm focus:outline-none overflow-auto placeholder-gray-400;
+}
+
+.new-message-form__submit {
+  @apply w-full text-sm bg-[#1d9bf0] hover:bg-[#1d9bf0]/90 text-white h-10 rounded-sm mt-5 font-medium;
+}
+
+.message-list__wrapper {
+  @apply bg-[#f9f9ff] p-3 mt-10 space-y-4;
+}
+
+.message__wrapper {
+  @apply bg-white py-4 px-3;
+}
+.message__content h5 {
+  @apply text-sm font-bold;
+}
+.message__content p {
+  @apply text-sm mt-2 text-gray-800;
+}
+
+.new-comment-form__wrapper {
+  @apply flex justify-center h-7 mt-3;
+}
+.new-comment-form__wrapper input {
+  @apply w-full rounded-sm p-2 text-sm border focus:outline-none overflow-auto placeholder-gray-400;
+}
+.new-comment-form__wrapper button {
+  @apply rounded-sm text-xs border ml-2 px-3 py-1 bg-[#e5f6ff];
+}
+
+.comment-list__wrapper {
+  @apply space-y-2 mt-3;
+}
+
+.comment__empty {
+  @apply text-xs text-center text-gray-400 mt-7 font-medium;
+}
+.comment__content {
+  @apply bg-[#f0f0f0] rounded-md py-2 px-3 text-xs text-gray-500;
 }
