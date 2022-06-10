@@ -1,5 +1,7 @@
+import MessagePage from "./pages/MessagePage";
+
 function App() {
-  return <div>App</div>;
+  return <MessagePage />;
 }
 
 export default App;
