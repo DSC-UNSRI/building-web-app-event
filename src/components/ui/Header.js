@@ -1,4 +1,4 @@
-import logo from "../assets/kimitsu-logo.png";
+import logo from "../../assets/kimitsu-logo.png";
 
 function Header() {
   return (
